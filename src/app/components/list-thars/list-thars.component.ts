@@ -15,23 +15,25 @@ export class ListTharsComponent implements OnInit {
   }
 @Input() gotraName:String;
 fromSearch=false;
-gotra:{name:String,thars:[]}
+gotra:{name:String,thars:[],searchValue:String}
   ngOnInit(): void {
-    if(!this.gotraName){
-      this.gotraName = this.route.snapshot.paramMap.get('id');
+      this.route.paramMap.subscribe((data:ParamMap)=>{
+        this.gotraName = data.get('id');
+        this.getGotraDetail();
+      });
       console.log(this.route);
       this.route.queryParamMap.subscribe((data:ParamMap)=>{
         if(data.has('fromSearch')){
           this.fromSearch=true;
-        
         }
       });
-    }
+    
     console.log(this.fromSearch)
-    this.getGotraDetail();
+    
   }
   getGotraDetail(){
     this.gotra = this.gotraService.getGotraDetail(this.gotraName);
   }
+  
 
 }

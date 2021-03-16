@@ -68,7 +68,7 @@ getGotraFromThar(thar:String):Observable<any>{
     console.log(y);
     if(y[1].includes(thar)){
       console.log(y[1]);
-     gotra={name:y[0],thars:y[1]}
+     gotra={name:y[0],thars:y[1],searchValue:thar}
     }
   })
   console.log(gotra);

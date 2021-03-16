@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { GotraService } from 'src/app/services/gotra.service';
 
 @Component({
@@ -8,12 +9,14 @@ import { GotraService } from 'src/app/services/gotra.service';
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private gotraService:GotraService) { }
+  constructor(private gotraService:GotraService,
+    private router:Router
+    ) { }
 gotraThar:any;
 suggestions=[];
 allGotras=[];
 allThars=[];
-searchData:String;
+searchData:String="";
   ngOnInit(): void {
     this.gotraThar=this.gotraService.gotraThar;
     // this.listTharAndGotras();
@@ -23,7 +26,9 @@ searchData:String;
 search(){
   console.log(this.searchData);
   this.gotraService.getGotraFromThar(this.searchData).subscribe(
-    data=>console.log(data),
+    (data:any)=>{
+      this.router.navigateByUrl("/detail/"+data.name.toLowerCase()+"?fromSearch=true");
+    },
     (err:any)=>console.error(err)
   );
 }
