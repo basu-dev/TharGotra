@@ -31,7 +31,69 @@ export class GotraService {
     "Dhungana","Dhital","Rimal","Tiwari","Majhi","Basnet(Khaptari)","Luitel","Pudasaini","Baniya","Raghubanshi","Bhandari",
     "Bastakoti","Dashailiya","Pathak","Gauli","Dangi"
   ],
-    Garga:["Acharya","Acharja"]
+    Garga:["Bastola","Gajurel","Bhatta","Risal","Lamicchane (Bhatta)","Bhurtel","Bhurtel","Acharya","Acharja","Lamchhanethapa",
+  "Bhetwal","Lamichhane Gurung","Rokaha","Chudal","Joshi(Bhijaar)","Khadka (Palpali)"
+  ],
+  Gautam:[
+    "Tripathi","Tiwari","Chand","Dangal"
+  ],
+  GhritaKaushik:[
+    "Sutarkarki","Baral","Pandit","Khanal","Nepal","Bardewa","Wardewa"
+  ],
+  Dhananjaya:[
+    "Homegain","Humagain","Rijal","Pangeni","Basel","Kukurkate","Guragain","Basnet (Khulal)","Basnet","Bhusal","Budathoki (Khulal)",
+    "Gauripipli","Dhamala","Pakuwal"
+  ],
+  Bhardwaj:[
+    "Chaulagain","Subedi","Thapaliya","Baidawaar","Vaidawaar","Panthi",
+    "Pant","Siluwal","Silwal","Bist(Sijapati)","Wagle","Lohani","Adhikari (Thami)","Pokhrel(Dudh)","Siwakoti","Devkota",
+    "Niraula","Jamarkattel","Khadka (Maharajji Khadka)","Raut","Kandel","Basnet (Shripali) ","Pande (Kuleta)","Chhetri",
+    "Joshi (Lataula)","Gurung (Ghale)","Lama Gurung","Rajauriya","Chimauriya","Burlakoti","Majagaiya","Sitaula","Bauhara",
+    "Singraula","Khanigelal"
+  ],
+  Parashar:[
+    "Marhattha","Lamakarki","Arya","Dhimal","Kattel","Pandit",
+    "Naral"
+  ],
+  Mandabya:[
+    "Bajagain","Bajgain","Gyawali","Katuwal","Panthi","Maskebajai"
+  ],
+  Maudgalya:[
+    "Koirala","Kuinkel","Thapa(Kalikote)","Simkhada","Upreti","Karki (Khulal , Mudula ,Lama)","Timsina","Belkaali",
+    "Timalsina","Belbase"
+  ],
+  Batsa:[
+    "Rana","Lamsal","Kunwar","Dahal","Rupakheti","Chauhan","Kharal"
+  ],
+  Krishnatri:[
+    "Khakurel"
+  ],
+  Jaimini:[
+    "Ghodasaini"
+  ],
+  Sainik:["Sahi"],
+  Bashistha:[
+    "Suyal","Gharti","Gaire Raut","Bhattarai","Suyel Thapa","Dawadi","Bhandari (Thansine)","Gharti (Suyal)","Kharel","Chalise",
+    "Mudbari","Falakati","Pathak","Keshari","Soti"
+  ],
+  Shandilya:[
+    "Kafle","Prashain","Mahat","Katuwal"
+  ],
+  Angiras:[
+    "Joshi (Silai)", "Sedhain (Saunak)","Shahi"
+  ],
+  Bishwamitra:[
+    "Bhatta (Alina)","Duwadi","Nirbanshi","Rayal","Rai"
+  ],
+  Krishnanjani:[
+    "Bist (Kamalkote)","Kaderia"
+  ],
+  Kapil:[
+    "Bohara","Khadka(Puwa)","Dani, Chhetri(Bist ,ThapaKhadka)"
+  ],
+  Bhrigu:[
+    "Chauhan"
+  ]
   }
   allGotras=[];
   allThars=[];

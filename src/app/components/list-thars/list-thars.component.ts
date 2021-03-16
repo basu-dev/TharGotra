@@ -19,6 +19,7 @@ gotra:{name:String,thars:[],searchValue:String}
   ngOnInit(): void {
       this.route.paramMap.subscribe((data:ParamMap)=>{
         this.gotraName = data.get('id');
+        
         this.getGotraDetail();
       });
       console.log(this.route);

@@ -8,3 +8,8 @@ li{
     box-shadow: 3px 3px 4px#ddd6d6;
     transition: .2s;
 }
+ul{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:1rem;
+}
