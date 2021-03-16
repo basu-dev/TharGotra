@@ -1,0 +1,29 @@
+datalist{
+    background-color: white !important;
+    color:black;
+}
+.input-place{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 10fr 0.5fr;
+    padding:.3rem 10px;
+    border:1px solid rgb(221, 217, 217);
+    border-radius: 50px;
+    align-items: center;
+    gap: .3rem;
+    box-shadow: 0px 2px 3px 0px #e9e4e491;
+}
+.input-place:nth-child(3){
+    text-align: right;
+}
+input{
+    /* min-width: 300px; */
+    border:none;
+    padding:10px;
+    outline: none;
+
+}
+svg{
+    cursor: pointer;
+}
