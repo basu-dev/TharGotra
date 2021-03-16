@@ -1,13 +1,15 @@
 datalist{
     background-color: white !important;
     color:black;
+    opacity: .5 !important;
+    
 }
 .input-place{
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 10fr 0.5fr;
-    padding:.3rem 10px;
+    padding:.3rem 15px;
     border:1px solid rgb(221, 217, 217);
     border-radius: 50px;
     align-items: center;
@@ -19,11 +21,12 @@ datalist{
 }
 input{
     /* min-width: 300px; */
+    background-color: transparent;
     border:none;
     padding:10px;
     outline: none;
-
 }
 svg{
     cursor: pointer;
+    height: 25px;
 }

@@ -1,5 +1,7 @@
 :root{
     --nav-height:50px;
+    --shadow:#cebdbd;
+    --primary-color:orangered;
 }
 *{
     margin:0;
@@ -7,6 +9,7 @@
 }
 body{
     overflow:hidden;
+    background-color: rgb(250, 246, 246);
 }
 nav{
     width:100%;
@@ -14,14 +17,15 @@ nav{
     justify-content: center;
     align-items: center;
     display: flex;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 25px;
     font-weight: 600;
-    background-color: orangered;
+    background-color: var(--primary-color);
     position: fixed;
     top:0;
     left:0;
     color:white;
+    /* box-shadow: 0px 5px 5px rgba(22, 21, 21, 0.212); */
 }
 section{
     padding:10px;
@@ -41,6 +45,38 @@ section{
     }
 }
 .main{
-    height: calc(100vh - var(--nav-height) - 100px);
     overflow-y: scroll;
+    overflow-x: hidden;
+}
+.sec{
+    display:grid;
+    grid-gap:.5rem;
+    grid-template-rows:1fr 10fr;
+    height: calc(100vh - var(--nav-height));
+}
+li{
+    list-style: none;
+    /* background-color: red; */
+    padding:.5rem 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-bottom: .7rem;
+    box-shadow: 0px 1px 4px var(--shadow);
+    transition: .2s;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+.belonging{
+    background-color:var(--primary-color);
+    color:white;
+    padding:5px ;
+    font-size: 1.03rem;
+    text-align: center;
+}
+path{
+    fill:var(--primary-color)
 }

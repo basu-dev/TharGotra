@@ -12,7 +12,11 @@ export class ListGotrasComponent implements OnInit {
   constructor(private gotraService:GotraService,private router:Router) { }
   allGotras:String[];
   ngOnInit(): void {
-    this.allGotras=this.gotraService.allGotras;
+    this.gotraService.gotraSub.subscribe(
+      (data:any[])=>{this.allGotras = (data && data?.length!=0)?data:this.gotraService.allGotras;
+      }
+    )
+    this.gotraService.gotraSub.next();
   }
   showGotraDetail(gotra:String){
     this.router.navigateByUrl("/detail/"+gotra.toLowerCase());

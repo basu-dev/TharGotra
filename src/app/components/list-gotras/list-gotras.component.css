@@ -1,18 +1,9 @@
-li{
-    list-style: none;
-    /* background-color: red; */
-    padding:.5rem 1rem;
-    font-size: 1.1rem;
-    cursor: pointer;
-    margin:.5rem 0;
-    box-shadow: 3px 3px 4px#ddd6d6;
-    transition: .2s;
-}
-li:hover{
-    box-shadow: 8px 6px 7px 1px #c9c0c0;
-   transform: scale(1.05);
 
+li:hover{
+    box-shadow: 0px 0px 7px 1px #c9c0c0;
+   transform: scale(1.03);
 }
-li:nth-child(odd){
-    /* background-color: blue; */
+
+ul{
+    padding:1rem;
 }

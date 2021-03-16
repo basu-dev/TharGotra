@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, throwError } from 'rxjs';
+import { Observable, of, Subject, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,7 @@ export class GotraService {
 
   constructor() { }
   gotraThar:any={
-    Kaudinya:["Pyakurel","Paneru","Acharja","Acharya","Gaire","Sapkots","Satyal",
+    Kaudinya:["Pyakurel","Paneru","Acharja (Kaudinya)","Acharya (Kaudinya)","Gaire","Sapkots","Satyal",
     "Marasaini","Morasaini","Parajuli","Baskota","Trital","Neupane","Khadka Lakai (Kamalkothe)","Thapa","Rawal"],
     Atri:["Chapagai","Osti","Oasti","Mishra","Khatiwoda","Malla","Ojha","Adhikari(Thadarai)","Gautam"],
     Atreya:["Dawadi","Dulal","Paudel","Poudel","Thapa (Puwar, Khulaal, Draini, Kalikote, Bagaale)","Panipokhrel",
@@ -31,7 +31,7 @@ export class GotraService {
     "Dhungana","Dhital","Rimal","Tiwari","Majhi","Basnet(Khaptari)","Luitel","Pudasaini","Baniya","Raghubanshi","Bhandari",
     "Bastakoti","Dashailiya","Pathak","Gauli","Dangi"
   ],
-    Garga:["Bastola","Gajurel","Bhatta","Risal","Lamicchane (Bhatta)","Bhurtel","Bhurtel","Acharya","Acharja","Lamchhanethapa",
+    Garga:["Bastola","Gajurel","Bhatta","Risal","Lamicchane (Bhatta)","Bhurtel","Bhurtel","Acharya (Garga)","Acharja (Garga)","Lamchhanethapa",
   "Bhetwal","Lamichhane Gurung","Rokaha","Chudal","Joshi(Bhijaar)","Khadka (Palpali)"
   ],
   Gautam:[
@@ -97,7 +97,7 @@ export class GotraService {
   }
   allGotras=[];
   allThars=[];
-
+gotraSub=new Subject<any>();
   listTharAndGotras():void{
     Object.entries(this.gotraThar).forEach((y:any)=>{
       this.allGotras.push(y[0]);
@@ -105,13 +105,10 @@ export class GotraService {
         this.allThars.push(a)
       })
     })
-
-  
 }
 getGotraDetail(name:String){
   let gotra:any;
   Object.entries(this.gotraThar).forEach((y:any)=>{
-    console.log(name,y);
     if(y[0].toLowerCase() == name){
       gotra={name,thars:y[1]}
     }
@@ -121,19 +118,19 @@ getGotraDetail(name:String){
 checkValidThar(thar:String){
   return this.allThars.includes(thar);
 }
+checkValidGotra(gotra:String){
+  return this.allGotras.includes(gotra);
+}
 getGotraFromThar(thar:String):Observable<any>{
   if(!this.checkValidThar(thar)){
     return throwError("Enter proper value")
   }
  let gotra:any;
   Object.entries(this.gotraThar).forEach((y:any,i)=>{
-    console.log(y);
     if(y[1].includes(thar)){
-      console.log(y[1]);
      gotra={name:y[0],thars:y[1],searchValue:thar}
     }
   })
-  console.log(gotra);
   return of(gotra);
 }
 

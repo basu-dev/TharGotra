@@ -22,14 +22,12 @@ gotra:{name:String,thars:[],searchValue:String}
         
         this.getGotraDetail();
       });
-      console.log(this.route);
       this.route.queryParamMap.subscribe((data:ParamMap)=>{
         if(data.has('fromSearch')){
           this.fromSearch=true;
         }
       });
     
-    console.log(this.fromSearch)
     
   }
   getGotraDetail(){
