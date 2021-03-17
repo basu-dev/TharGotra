@@ -24,6 +24,7 @@ searchData:String="";
     this.allThars=this.gotraService.allThars;
   }
 search(){
+console.log("searching",this.searchData);
 
   this.gotraService.getGotraFromThar(this.searchData).subscribe(
     (data:any)=>{

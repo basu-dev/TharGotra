@@ -15,7 +15,7 @@ export class ListTharsComponent implements OnInit {
   }
 @Input() gotraName:String;
 fromSearch=false;
-gotra:{name:String,thars:[],searchValue:String}
+gotra:{name:String,thars:[],searchValue:String,prawar:[]}
   ngOnInit(): void {
       this.route.paramMap.subscribe((data:ParamMap)=>{
         this.gotraName = data.get('id');

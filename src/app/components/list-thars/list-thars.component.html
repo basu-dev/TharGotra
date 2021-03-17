@@ -1,7 +1,14 @@
 <div *ngIf="!fromSearch" class="belonging">{{gotraName | uppercase}}</div>
 
 <div class="belonging" *ngIf="fromSearch"><b>{{gotra?.searchValue }}</b> Belongs to gotra <b>{{gotra?.name | uppercase}}</b></div>
-<div *ngIf="fromSearch"><br>Other Surnames belonging to gotra <b>{{gotra.name | uppercase}}</b> are: </div>
+<div class="subtitle" *ngIf="gotra?.prawar.length > 0">Prawar</div>
+<ul *ngIf="gotra?.prawar.length > 0">
+    <li *ngFor="let item of gotra?.prawar">
+        {{item}}
+    </li>
+</ul>
+<div *ngIf="fromSearch"><br>All Surnames belonging to gotra <b>{{gotra.name | uppercase}}</b> are: </div>
+<div class="subtitle">SurNames</div>
 <ul>
     <li *ngFor="let item of gotra?.thars">
         {{item}}

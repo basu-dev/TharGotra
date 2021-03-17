@@ -1,9 +1,4 @@
-datalist{
-    background-color: white !important;
-    color:black;
-    opacity: .5 !important;
-    
-}
+
 .input-place{
     display: grid;
     justify-content: center;
